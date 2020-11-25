@@ -1,0 +1,116 @@
+<!--
+  ~ MIT License
+  ~ Copyright (c) 2020 Excellens
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Elementary MarkdownNotepad Demo</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="../dist/markdown-notepad.css">
+</head>
+<body>
+
+<div id="container">
+    <script type="theme/markdown-notepad" id="default">
+
+<!--<div class="markdown-notepad theme-default" data-component="markdown-notepad">-->
+        <div class="button-toolbar">
+            <div class="tab-group">
+                <div class="tab tab-write" data-component="markdown-notepad.tab.tab-write">Write</div>
+                <div class="tab tab-preview" data-component="markdown-notepad.tab.tab-preview">Preview</div>
+                <!--<div class="tab tab-test active" data-component="markdown-notepad.tab.tab-test">Test</div>-->
+            </div>
+
+            <div class="button-toolbar">
+                <div class="button-group">
+                    <button class="button button-text-headline" data-component="markdown-notepad.button.button-text-headline">H</button>
+                    <button class="button button-text-bold" data-component="markdown-notepad.button.button-text-bold">B</button>
+                    <button class="button button-text-italic" data-component="markdown-notepad.button.button-text-italic">I</button>
+                </div>
+                <div class="button-group">
+                    <button class="button button-text-quote" data-component="markdown-notepad.button.button-text-quote">Quote</button>
+                    <button class="button button-text-code" data-component="markdown-notepad.button.button-text-code">Code</button>
+                    <button class="button button-text-link" data-component="markdown-notepad.button.button-text-link">Link</button>
+                </div>
+                <div class="button-group">
+                    <button class="button button-text-ul" data-component="markdown-notepad.button.button-text-ul">UL</button>
+                    <button class="button button-text-ol" data-component="markdown-notepad.button.button-text-ol">OL</button>
+                </div>
+                <div class="button-group">
+                    <button class="button button-history-backward" data-component="markdown-notepad.button.button-history-backward">Undo</button>
+                    <button class="button button-history-forward" data-component="markdown-notepad.button.button-history-forward">Redo</button>
+                </div>
+            </div>
+        </div>
+        <div class="tab-content">
+            <div class="tab-pane tab-pane-write active" data-component="markdown-notepad.tab-pane.tab-pane-write">
+                <textarea class="markdown-textarea" data-component="markdown-notepad.textarea"></textarea>
+                <!--
+                  ~ Optional element:
+                  -->
+                <div class="markdown-textarea-status">
+                    <small title="Mastering Markdown Guide by GitHub">
+                        <a href="https://guides.github.com/features/mastering-markdown/" target="_blank">Help</a>
+                    </small>
+                </div>
+            </div>
+            <div class="tab-pane tab-pane-preview" data-component="markdown-notepad.tab-pane.tab-pane-preview">
+                <div class="markdown-preview" data-component="markdown-notepad.preview"></div>
+            </div>
+            <!--<div class="tab-pane tab-pane-test" data-component="markdown-notepad.tab-pane.tab-pane-test">-->
+                <!--<div class="markdown-test"></div>-->
+            <!--</div>-->
+        </div>
+<!--</div>-->
+
+    </script>
+</div>
+
+<script type="text/javascript" src="../node_modules/@excellens/elementary/dist/elementary.js">
+</script>
+<script type="text/javascript" src="../../markdown-notepad-pack/dist/markdown-notepad-pack.js">
+</script>
+<script type="text/javascript" src="../dist/markdown-notepad.js">
+</script>
+
+<script type="text/javascript">
+
+    (function (document) {
+        var container = document.getElementById('container');
+
+        var notepad = new MarkdownNotepad.Control.MarkdownNotepad.MarkdownNotepad(document);
+        container.appendChild(notepad);
+        notepad.initialize();
+
+        var notepadMirror = new MarkdownNotepad.Control.MarkdownNotepad.MarkdownNotepad(document, null, notepad.presenter.state);
+        container.appendChild(notepadMirror);
+        notepadMirror.initialize();
+    }(document));
+
+</script>
+
+</body>
+</html>

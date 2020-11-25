@@ -1,0 +1,269 @@
+/*!
+ * MIT License
+ * Copyright (c) 2020 Excellens
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
+/// The base class, which is independent from the theme.
+//
+//  The property order is based on concentric-css (https://rhodesmill.org/brandon/2011/concentric-css/).
+.markdown-notepad {
+
+  /// The theme class, this should be unique for each theme.
+  &.theme-default {
+    margin: 0.25rem;
+
+    border: 1px solid gray;
+    border-radius: 0.25rem;
+
+    background-color: white;
+
+    padding-top: 0.50rem;
+
+    /// The button-toolbar class, which is currently not used for any component.
+    .button-toolbar {
+      display: flex;
+
+      flex: 0 1 auto;
+
+      justify-content: space-between;
+
+      /// The button-toolbar class, which is currently not used for any component.
+      //
+      //  Only applied for nested a button-toolbar.
+      .button-toolbar {
+        overflow: visible hidden;
+      }
+
+      /// The button-group class, which is currently not used for any component.
+      .button-group {
+        display: flex;
+
+        flex: 0 1 auto;
+        flex-wrap: nowrap;
+
+        padding: 0 0.50rem;
+
+        /// The button class, which is used for the button component.
+        //
+        //  Only applied for immediate children.
+        > .button {
+          display: inline-block;
+
+          flex: 1 1 0;
+
+          margin-bottom: 0.25rem;
+
+          border: 1px solid gray;
+          border-radius: 0.25rem;
+
+          cursor: pointer;
+
+          /// The button-group style.
+          //
+          //  Remove border-radius (left), when it's not the first button in its group.
+          &:not(:first-child) {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+          }
+
+          /// The button-group style.
+          //
+          //  Remove border-radius (right), when it's not the last button in its group.
+          &:not(:last-child) {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+          }
+        }
+      }
+    }
+
+    /// The tab-group class, which is currently not used for any component.
+    //
+    //  The style is shared with the button-group class.
+    .tab-group {
+      @extend .button-group;
+
+      /// The tab class, which is used for the tab component.
+      //
+      //  Offset margin (bottom) by -1px to overlap the border (top) of the tab-content below.
+      //
+      //  Only applied for immediate children.
+      > .tab {
+        display: inline-block;
+
+        flex: 1 1 0;
+
+        margin-bottom: -1px;
+
+        border: 1px solid gray;
+        border-radius: 0.25rem 0.25rem 0 0;
+
+        background-color: white;
+
+        cursor: pointer;
+
+        padding: 0.25rem 0.50rem;
+
+        /// The tab-group style.
+        //
+        //  Remove border-radius (top-left), when it's not the first tab in its group.
+        &:not(:first-child) {
+          border-top-left-radius: 0;
+        }
+
+        /// The tab-group style.
+        //
+        //  Remove border-radius (top-right), when it's not the last tab in its group.
+        &:not(:last-child) {
+          border-top-right-radius: 0;
+        }
+
+        /// The tab-group-style.
+        //
+        //  Set the border (bottom) to 1px solid white, to blend in with the tab-content below.
+        &.active {
+          border-bottom: 1px solid white;
+        }
+      }
+    }
+
+    /// The tab-content class, which is currently not used for any component.
+    .tab-content {
+      border-top: 1px solid gray;
+
+      /// The tab-pane class, which is used for the tab-pane component.
+      //
+      //  Display as none by default, except when combined with the active class.
+      .tab-pane {
+        display: none;
+
+        padding: 0.50rem;
+
+        /// The tab-pane style.
+        //
+        //  Display as block, when combined with the active class.
+        &.active {
+          display: block;
+        }
+
+        /// The tab-pane style for the write tab-pane.
+        //
+        //  No own style applied, only to restrict the child element (markdown-textarea) style to the specific tab-pane.
+        &.tab-pane-write {
+          /// The markdown-textarea style, which is used for the markdown-textarea component.
+          //
+          //  Offset margin (bottom) by -5px to fix the textarea element style with a weird bottom expansion.
+          .markdown-textarea {
+            display: block;
+
+            border: 1px solid gray;
+            border-radius: 0.25rem;
+
+            padding: 0.50rem;
+
+            width: 100%;
+
+            height: 100px;
+            min-height: 100px;
+            max-height: 500px;
+
+            /// The tab-pane style.
+            //
+            //  Remove border-radius (top-left, top-right), when it's not the first element in its tab.
+            &:not(:first-child) {
+              border-top-left-radius: 0;
+              border-top-right-radius: 0;
+            }
+
+            /// The tab-pane style.
+            //
+            //  Remove border-radius (bottom-left, bottom-right), when it's not the last element in its tab.
+            &:not(:last-child) {
+              border-bottom-left-radius: 0;
+              border-bottom-right-radius: 0;
+            }
+          }
+
+          .markdown-textarea-status {
+            border: 1px solid gray;
+
+            border-radius: 0.25rem;
+
+            background-color: whitesmoke;
+
+            padding: 0.25rem;
+
+            width: 100%;
+
+            line-height: 1rem;
+
+            font-size: 0.8rem;
+
+            /// The tab-pane style.
+            //
+            //  Remove border-radius (top-left, top-right) and border (top), when it's not the first element in its tab.
+            &:not(:first-child) {
+              border-top: none;
+
+              border-top-left-radius: 0;
+              border-top-right-radius: 0;
+            }
+
+            /// The tab-pane style.
+            //
+            //  Remove border-radius (bottom-left, bottom-right) and border (bottom), when it's not the last element in its tab.
+            &:not(:last-child) {
+              border-bottom: none;
+
+              border-bottom-left-radius: 0;
+              border-bottom-right-radius: 0;
+            }
+          }
+        }
+
+        /// The tab-pane style for the preview tab-pane.
+        //
+        //  No own style applied, only to restrict the child element (markdown-preview) style to the specific tab-pane.
+        &.tab-pane-preview {
+          /// The markdown-preview style, which is used for the markdown-preview component.
+          .markdown-preview {
+            border: 1px solid whitesmoke;
+
+            border-radius: 0.25rem;
+
+            cursor: default;
+
+            padding: 0.50rem;
+
+            overflow: auto visible;
+            resize: vertical;
+
+            width: 100%;
+
+            height: 100px;
+            min-height: 100px;
+            max-height: 500px;
+          }
+        }
+      }
+    }
+  }
+}

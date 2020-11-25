@@ -1,0 +1,49 @@
+{
+  "name": "@excellens/markdown-notepad",
+  "version": "1.0.0",
+  "description": "A simple but extensible markdown editor based on @excellens/elementary.",
+  "main": "src/Main.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo 'Error: no test specified' && exit 0",
+    "build": "rollup --config build.js",
+    "build-theme": "node-sass theme/main.scss dist/markdown-notepad.css --source-map true && npm run build-theme-min",
+    "build-theme-min": "node-sass theme/main.scss dist/markdown-notepad.min.css --output-style compressed --source-map true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/excellens/markdown-notepad.git"
+  },
+  "keywords": [
+    "excellens",
+    "elementary",
+    "javascript",
+    "markdown-notepad",
+    "markdown",
+    "notepad"
+  ],
+  "author": "Marcel <github@gameplayjdk.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/excellens/markdown-notepad/issues"
+  },
+  "homepage": "https://github.com/excellens/markdown-notepad#readme",
+  "dependencies": {
+    "@excellens/elementary": "^1.0.0",
+    "@excellens/markdown-notepad-pack": "^1.0.1",
+    "@rollup/plugin-node-resolve": "^10.0.0",
+    "bootstrap": "^4.5.3"
+  },
+  "devDependencies": {
+    "@rollup/plugin-json": "^4.1.0",
+    "node-sass": "^5.0.0",
+    "rollup": "^2.33.3",
+    "rollup-plugin-terser": "^7.0.2"
+  },
+  "files": [
+    "dist/**/*",
+    "src/**/*"
+  ]
+}

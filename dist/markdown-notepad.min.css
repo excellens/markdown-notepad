@@ -1,0 +1,51 @@
+/*!
+ * MIT License
+ * Copyright (c) 2020 Excellens
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ *//*!
+ * Bootstrap Reboot v4.5.3 (https://getbootstrap.com/)
+ * Copyright 2011-2020 The Bootstrap Authors
+ * Copyright 2011-2020 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
+ */*,*::before,*::after{box-sizing:border-box}html{font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}article,aside,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";font-size:1rem;font-weight:400;line-height:1.5;color:#212529;text-align:left;background-color:#fff}[tabindex="-1"]:focus:not(:focus-visible){outline:0 !important}hr{box-sizing:content-box;height:0;overflow:visible}h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:.5rem}p{margin-top:0;margin-bottom:1rem}abbr[title],abbr[data-original-title]{text-decoration:underline;text-decoration:underline dotted;cursor:help;border-bottom:0;text-decoration-skip-ink:none}address{margin-bottom:1rem;font-style:normal;line-height:inherit}ol,ul,dl{margin-top:0;margin-bottom:1rem}ol ol,ul ul,ol ul,ul ol{margin-bottom:0}dt{font-weight:700}dd{margin-bottom:.5rem;margin-left:0}blockquote{margin:0 0 1rem}b,strong{font-weight:bolder}small{font-size:80%}sub,sup{position:relative;font-size:75%;line-height:0;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}a{color:#007bff;text-decoration:none;background-color:transparent}a:hover{color:#0056b3;text-decoration:underline}a:not([href]):not([class]){color:inherit;text-decoration:none}a:not([href]):not([class]):hover{color:inherit;text-decoration:none}pre,code,kbd,samp{font-family:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;font-size:1em}pre{margin-top:0;margin-bottom:1rem;overflow:auto;-ms-overflow-style:scrollbar}figure{margin:0 0 1rem}img{vertical-align:middle;border-style:none}svg{overflow:hidden;vertical-align:middle}table{border-collapse:collapse}caption{padding-top:.75rem;padding-bottom:.75rem;color:#6c757d;text-align:left;caption-side:bottom}th{text-align:inherit;text-align:-webkit-match-parent}label{display:inline-block;margin-bottom:.5rem}button{border-radius:0}button:focus{outline:1px dotted;outline:5px auto -webkit-focus-ring-color}input,button,select,optgroup,textarea{margin:0;font-family:inherit;font-size:inherit;line-height:inherit}button,input{overflow:visible}button,select{text-transform:none}[role="button"]{cursor:pointer}select{word-wrap:normal}button,[type="button"],[type="reset"],[type="submit"]{-webkit-appearance:button}button:not(:disabled),[type="button"]:not(:disabled),[type="reset"]:not(:disabled),[type="submit"]:not(:disabled){cursor:pointer}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner{padding:0;border-style:none}input[type="radio"],input[type="checkbox"]{box-sizing:border-box;padding:0}textarea{overflow:auto;resize:vertical}fieldset{min-width:0;padding:0;margin:0;border:0}legend{display:block;width:100%;max-width:100%;padding:0;margin-bottom:.5rem;font-size:1.5rem;line-height:inherit;color:inherit;white-space:normal}progress{vertical-align:baseline}[type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button{height:auto}[type="search"]{outline-offset:-2px;-webkit-appearance:none}[type="search"]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{font:inherit;-webkit-appearance:button}output{display:inline-block}summary{display:list-item;cursor:pointer}template{display:none}[hidden]{display:none !important}/*!
+ * MIT License
+ * Copyright (c) 2020 Excellens
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */.markdown-notepad.theme-default{margin:0.25rem;border:1px solid gray;border-radius:0.25rem;background-color:white;padding-top:0.50rem}.markdown-notepad.theme-default .button-toolbar{display:flex;flex:0 1 auto;justify-content:space-between}.markdown-notepad.theme-default .button-toolbar .button-toolbar{overflow:visible hidden}.markdown-notepad.theme-default .button-toolbar .button-group,.markdown-notepad.theme-default .button-toolbar .tab-group{display:flex;flex:0 1 auto;flex-wrap:nowrap;padding:0 0.50rem}.markdown-notepad.theme-default .button-toolbar .button-group>.button,.markdown-notepad.theme-default .button-toolbar .tab-group>.button{display:inline-block;flex:1 1 0;margin-bottom:0.25rem;border:1px solid gray;border-radius:0.25rem;cursor:pointer}.markdown-notepad.theme-default .button-toolbar .button-group>.button:not(:first-child),.markdown-notepad.theme-default .button-toolbar .tab-group>.button:not(:first-child){border-top-left-radius:0;border-bottom-left-radius:0}.markdown-notepad.theme-default .button-toolbar .button-group>.button:not(:last-child),.markdown-notepad.theme-default .button-toolbar .tab-group>.button:not(:last-child){border-top-right-radius:0;border-bottom-right-radius:0}.markdown-notepad.theme-default .tab-group>.tab{display:inline-block;flex:1 1 0;margin-bottom:-1px;border:1px solid gray;border-radius:0.25rem 0.25rem 0 0;background-color:white;cursor:pointer;padding:0.25rem 0.50rem}.markdown-notepad.theme-default .tab-group>.tab:not(:first-child){border-top-left-radius:0}.markdown-notepad.theme-default .tab-group>.tab:not(:last-child){border-top-right-radius:0}.markdown-notepad.theme-default .tab-group>.tab.active{border-bottom:1px solid white}.markdown-notepad.theme-default .tab-content{border-top:1px solid gray}.markdown-notepad.theme-default .tab-content .tab-pane{display:none;padding:0.50rem}.markdown-notepad.theme-default .tab-content .tab-pane.active{display:block}.markdown-notepad.theme-default .tab-content .tab-pane.tab-pane-write .markdown-textarea{display:block;border:1px solid gray;border-radius:0.25rem;padding:0.50rem;width:100%;height:100px;min-height:100px;max-height:500px}.markdown-notepad.theme-default .tab-content .tab-pane.tab-pane-write .markdown-textarea:not(:first-child){border-top-left-radius:0;border-top-right-radius:0}.markdown-notepad.theme-default .tab-content .tab-pane.tab-pane-write .markdown-textarea:not(:last-child){border-bottom-left-radius:0;border-bottom-right-radius:0}.markdown-notepad.theme-default .tab-content .tab-pane.tab-pane-write .markdown-textarea-status{border:1px solid gray;border-radius:0.25rem;background-color:whitesmoke;padding:0.25rem;width:100%;line-height:1rem;font-size:0.8rem}.markdown-notepad.theme-default .tab-content .tab-pane.tab-pane-write .markdown-textarea-status:not(:first-child){border-top:none;border-top-left-radius:0;border-top-right-radius:0}.markdown-notepad.theme-default .tab-content .tab-pane.tab-pane-write .markdown-textarea-status:not(:last-child){border-bottom:none;border-bottom-left-radius:0;border-bottom-right-radius:0}.markdown-notepad.theme-default .tab-content .tab-pane.tab-pane-preview .markdown-preview{border:1px solid whitesmoke;border-radius:0.25rem;cursor:default;padding:0.50rem;overflow:auto visible;resize:vertical;width:100%;height:100px;min-height:100px;max-height:500px}
+
+/*# sourceMappingURL=markdown-notepad.min.css.map */
