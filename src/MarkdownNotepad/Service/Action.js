@@ -196,7 +196,7 @@ export function ActionTextWrap(prefix, suffix) {
 
     this.delete = function (state, text) {
         text.before = text.before.substring(undefined, text.before.length - this.prefix.length);
-        text.after = text.after.substring(undefined, text.after.length - this.suffix.length);
+        text.after = text.after.substring(this.suffix.length, undefined);
 
         text.start = text.start - this.prefix.length;
         text.end = text.end - this.prefix.length;
